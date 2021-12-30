@@ -1,0 +1,155 @@
+/*Глобальные настройки проекта*/
+body {
+    font-size: 16px;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #DDDDDD;
+}
+
+/*Подключение обнуляющих стилей*/
+@import url(/css/reset.css);
+/*Основыне перменые их можно заменить*/
+$max-width:1600px;
+/*Подключение шрифтов*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+/*Стили которые повторяються*/
+.title {
+    font-size: 48px;
+    color: #000;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.text {
+    font-size: 18px;
+    color: #000;
+    line-height: 1;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    color: #000;
+}
+
+a {
+    color: #000;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    transition: all 0.8s ease 0s;
+}
+
+/*Глобальные настройки проекта*/
+
+/*Главная обертка для сайта*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*Ограничивающий контейнер*/
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/*Стили для шапки сайта*/
+header {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+
+
+}
+
+.header__logo>img {}
+
+.header__row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/*Стили для меню шапки*/
+.menu__list {
+    display: flex;
+    margin-right: 20px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.login {
+    margin-left: 0px;
+
+}
+
+.login__btn {
+    background-color: #fff;
+}
+
+.btn__active {
+    background-color: #00B2FF;
+}
+
+.menu__link {
+    margin: 10px;
+    color: #000;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+    transition: all 0.8s ease 0s;
+}
+
+/*Стиль для контента*/
+main {
+    flex: 1 1 auto;
+}
+
+.fullscrean {
+    top: 0;
+    left: 0;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.fullscrean>img {
+    z-index: 1;
+}
+
+.border__info img {
+    position: absolute;
+    z-index: 2;
+    top: 250px;
+    right: 50px;
+}
+
+.news__title {
+    font-weight: bold;
+}
+
+/*Стили для подвала*/
+footer {
+    background-color: hotpink;
+    padding: 20px;
+}
+
+@media screen and (max-witdh:1600px) {
+    .container {
+        max-width: 1200px;
+    }
+}
