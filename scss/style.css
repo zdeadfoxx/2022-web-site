@@ -1,50 +1,39 @@
 @charset "UTF-8";
 /*Глобальные настройки проекта*/
-@import url(/css/reset.css);
+/*Глобальные переменые для стилей*/
+/*Глобальные отступы*/
+/*Основной размер сайта*/
+/*Подключение обнуляющих стилей*/
+@import url(new__reset.css);
+/*Основыне перменые их можно заменить*/
+/*Подключение шрифтов*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+/*Модификаторы стилей - чтобы не писать не дублировать стили*/
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  color: #E5E5E5;
+  line-height: 1.5;
+}
+
+.text {
+  font-weight: 400;
+  color: #E5E5E5;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
 body {
   font-size: 16px;
   line-height: 1;
   width: 100%;
   height: 100%;
-  background-color: #DDDDDD;
+  background-color: rgba(0, 0, 0, 0.377);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
-/*Подключение обнуляющих стилей*/
-/*Основыне перменые их можно заменить*/
-/*Подключение шрифтов*/
-/*Стили которые повторяються*/
-.title {
-  font-size: 48px;
-  color: #000;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.text {
-  font-size: 18px;
-  color: #000;
-  line-height: 1;
-}
-
-.btn {
-  padding: 20px;
-  font-size: 18px;
-  color: #000;
-}
-
-a {
-  color: #000;
-}
-
-.btn:hover {
-  text-decoration: underline;
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
-}
-
-/*Глобальные настройки проекта*/
-/*Главная обертка для сайта*/
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,140 +47,276 @@ a {
   overflow: hidden;
 }
 
-/*Ограничивающий контейнер*/
 .container {
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 10px;
 }
 
-/*Стили для шапки сайта*/
-header {
-  background-color: #fff;
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+.header {
+  background: url("/img/header__bg.png") center no-repeat;
+  background-size: cover;
   width: 100%;
+  height: 880px;
+  margin-bottom: 142px;
 }
 
-.header__row {
+.header::after {
+  content: '';
+}
+
+.header::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.header__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 259px;
+}
+
+.ff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.anout__title {
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0px 0px 20px 0px;
 }
 
-.fullscrean {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.about__text {
+  margin: 10px;
+}
+
+.about__video img {
+  max-width: 650px;
+  height: auto;
+}
+
+.about__game {
+  margin-bottom: 334px;
+}
+
+.why {
+  background: url("/img/why__img.png") center no-repeat;
+  background-size: cover;
+  margin-bottom: 72px;
+}
+
+.why__title {
+  text-align: center;
+  margin-bottom: 153px;
+}
+
+.why__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(auto, 1fr);
+      grid-template-columns: minmax(auto, 1fr);
+}
+
+.why__text {
+  padding: 40px;
+}
+
+.body__up,
+.body__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
 
-.info__body {
+.genres__title {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.genres__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fff;
-  max-width: 800px;
 }
 
-/*Стили для меню шапки*/
+.card__title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.genrer {
+  margin-bottom: 50px;
+}
+
+.result__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.result__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.result {
+  margin-bottom: 50px;
+}
+
+.footer {
+  margin-bottom: 20px;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vk,
+.instagram,
+.youtube {
+  height: 150px;
+  width: 150px;
+  background-color: #EFD5C3;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vk img,
+.instagram img,
+.youtube img {
+  padding: 40px;
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 20px;
-  font-size: 30px;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.login {
-  margin-left: 0px;
-}
-
-.login__btn {
-  background-color: #fff;
-}
-
-.btn__active {
-  background-color: #00B2FF;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menu__link {
-  margin: 10px;
-  color: #000;
+  margin: 0 20px;
 }
 
-.menu__link:hover {
-  text-decoration: underline;
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+span {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
 }
 
-/*Стиль для контента*/
-main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.fullscrean {
-  top: 0;
-  left: 0;
-  position: relative;
-  margin-bottom: 200px;
-}
-
-.fullscrean > img {
-  z-index: 1;
-}
-
-.border__info img {
-  position: absolute;
-  z-index: 2;
-  top: 250px;
-  right: 50px;
-}
-
-.news__title {
-  font-weight: bold;
-}
-
-/*Стили для подвала*/
-footer {
-  background-color: hotpink;
-  padding: 20px;
-}
-
-@media screen and (max-witdh: 1600px) {
+@media (max-width: 1920px) {
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .container {
+    max-width: none;
+    margin: 0 auto;
+  }
+  .header__body {
+    margin-top: 0px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .anout__title {
+    font-size: 48px;
+  }
+  .about__text {
+    font-size: 18px;
+  }
+  .about__video img {
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
