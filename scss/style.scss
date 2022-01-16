@@ -84,6 +84,21 @@ header {
     align-items: center;
 }
 
+.fullscrean {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.info__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    max-width: 800px;
+}
+
 /*Стили для меню шапки*/
 .menu__list {
     display: flex;
