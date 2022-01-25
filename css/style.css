@@ -222,7 +222,7 @@ p {
 }
 
 .info__text:after {
-    background: url('/img//ico/Polygon\ 3.svg') 0 0 no-repeat;
+    background: url('/img/Polygon3.svg') 0 0 no-repeat;
     content: '';
     align-items: center;
     text-align: center;
