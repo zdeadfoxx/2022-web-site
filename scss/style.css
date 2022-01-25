@@ -319,4 +319,8 @@ span {
     padding: 20px;
   }
 }
+
+.vk:hover {
+  background-color: black;
+}
 /*# sourceMappingURL=style.css.map */
