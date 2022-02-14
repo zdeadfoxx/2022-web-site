@@ -4,7 +4,7 @@
 /*Глобальные отступы*/
 /*Основной размер сайта*/
 /*Подключение обнуляющих стилей*/
-@import url(new__reset.css);
+@import url(/scss/reset.css);
 /*Основыне перменые их можно заменить*/
 /*Подключение шрифтов*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
@@ -48,6 +48,11 @@ body {
 }
 
 .container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container__why {
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -119,8 +124,9 @@ body {
 }
 
 .why {
-  background: url("/img/why__img.png") center no-repeat;
-  background-size: cover;
+  background: url("/img/why__img.png");
+  width: auto;
+  height: auto;
   margin-bottom: 72px;
 }
 
@@ -134,6 +140,18 @@ body {
   display: grid;
   -ms-grid-columns: minmax(auto, 1fr);
       grid-template-columns: minmax(auto, 1fr);
+}
+
+.why__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 1902px;
+  margin: 0 auto;
 }
 
 .why__text {
@@ -325,4 +343,3 @@ span {
 }
 
 /*dsdsdsds*/
-/*# sourceMappingURL=style.css.map */

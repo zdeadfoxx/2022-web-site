@@ -11,7 +11,7 @@ $background-color:rgba(0, 0, 0, 0.377);
 $maincolor:#fff;
 /*Основной размер сайта*/
 /*Подключение обнуляющих стилей*/
-@import url(new__reset.css);
+@import url(/scss/reset.css);
 /*Основыне перменые их можно заменить*/
 
 /*Подключение шрифтов*/
@@ -52,6 +52,12 @@ body {
 }
 
 .container {
+    max-width: $max-width;
+    margin: 0 auto;
+
+}
+
+.container__why {
     max-width: $max-width;
     margin: 0 auto;
 
@@ -118,8 +124,10 @@ body {
 }
 
 .why {
-    background: url('/img/why__img.png') center no-repeat;
-    background-size: cover;
+    background: url('/img/why__img.png');
+
+    width: auto;
+    height: auto;
     margin-bottom: 72px;
 }
 
@@ -131,6 +139,13 @@ body {
 .why__body {
     display: grid;
     grid-template-columns: minmax(auto, 1fr);
+}
+
+.why__row {
+    display: flex;
+    flex-direction: row;
+    max-width: 1902px;
+    margin: 0 auto;
 }
 
 .why__text {
