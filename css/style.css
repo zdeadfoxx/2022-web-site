@@ -4,7 +4,7 @@
 /*Глобальные отступы*/
 /*Основной размер сайта*/
 /*Подключение обнуляющих стилей*/
-@import url(/scss/reset.css);
+@import url(../scss/reset.css);
 /*Основыне перменые их можно заменить*/
 /*Подключение шрифтов*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
@@ -58,7 +58,7 @@ body {
 }
 
 .header {
-  background: url("/img/header__bg.png") center no-repeat;
+  background: url("img/header__bg.png") center no-repeat;
   background-size: cover;
   width: 100%;
   height: 880px;
@@ -124,7 +124,7 @@ body {
 }
 
 .why {
-  background: url("/img/why__img.png");
+  background: url("img/why__img.png");
   width: auto;
   height: auto;
   margin-bottom: 72px;
